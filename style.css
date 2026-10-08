@@ -1,0 +1,411 @@
+/* =========================
+   Global
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5efe6;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title i {
+    color: #f28c28;
+    font-size: 30px;
+}
+
+.title h1 {
+    font-size: 30px;
+    color: #333;
+}
+
+.theme-btn {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #fff1df;
+    color: #f28c28;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: #f28c28;
+    color: white;
+}
+
+
+/* =========================
+   Add Task
+========================= */
+
+.add-task {
+    margin-top: 25px;
+
+    background: #ffffff;
+    padding: 20px;
+
+    border-radius: 20px;
+
+    display: flex;
+    gap: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+#taskInput {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border: 2px solid #eee;
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+#taskInput:focus {
+    border-color: #f28c28;
+}
+
+#addTaskBtn {
+    border: none;
+
+    background: #f28c28;
+    color: white;
+
+    padding: 0 25px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: 0.3s;
+}
+
+#addTaskBtn:hover {
+    background: #d97416;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Tasks Section
+========================= */
+
+.tasks-section {
+    margin-top: 25px;
+
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    min-height: 300px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.tasks-header h2 {
+    font-size: 22px;
+}
+
+#taskCount {
+    background: #fff1df;
+    color: #f28c28;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   Task List
+========================= */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================
+   Empty Message
+========================= */
+
+.empty-message {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #999;
+}
+
+.empty-message i {
+    font-size: 55px;
+    color: #f5c58d;
+
+    margin-bottom: 15px;
+}
+
+.empty-message h3 {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.empty-message p {
+    font-size: 14px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #999;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .title h1 {
+        font-size: 24px;
+    }
+
+    .title i {
+        font-size: 25px;
+    }
+
+    .add-task {
+        flex-direction: column;
+    }
+
+    #addTaskBtn {
+        justify-content: center;
+        padding: 14px;
+    }
+
+    .tasks-section {
+        padding: 20px;
+    }
+
+    .tasks-header h2 {
+        font-size: 19px;
+    }
+}
+/* =========================
+   Task
+========================= */
+
+.task {
+    background: #fffaf4;
+
+    border: 1px solid #eee0d0;
+
+    padding: 15px 18px;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.task:hover {
+    transform: translateX(3px);
+}
+
+.task span {
+    font-size: 16px;
+    color: #444;
+}
+
+.delete-btn {
+    border: none;
+
+    background: #ffe5e0;
+    color: #e74c3c;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+
+    accent-color: #f28c28;
+
+    cursor: pointer;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark-mode {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .header,
+body.dark-mode .add-task,
+body.dark-mode .tasks-section {
+    background: #252525;
+}
+
+body.dark-mode .title h1,
+body.dark-mode .tasks-header h2 {
+    color: #ffffff;
+}
+
+body.dark-mode #taskInput {
+    background: #333;
+    color: #ffffff;
+    border-color: #444;
+}
+
+body.dark-mode #taskInput::placeholder {
+    color: #aaa;
+}
+
+body.dark-mode .task {
+    background: #303030;
+    border-color: #444;
+}
+
+body.dark-mode .task span {
+    color: #ffffff;
+}
+
+body.dark-mode .empty-message {
+    color: #aaa;
+}
+
+body.dark-mode .empty-message h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .footer {
+    color: #aaa;
+}
+
+body.dark-mode .theme-btn {
+    background: #333;
+    color: #f28c28;
+}

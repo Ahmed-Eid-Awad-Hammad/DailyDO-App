@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DailyDo</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="title">
+                <i class="fa-solid fa-list-check"></i>
+                <h1>DailyDo</h1>
+            </div>
+
+            <button class="theme-btn" id="themeBtn">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+
+        </header>
+
+
+        <!-- Add Task Section -->
+        <section class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+            >
+
+            <button id="addTaskBtn">
+                <i class="fa-solid fa-plus"></i>
+                Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Tasks Section -->
+        <section class="tasks-section">
+
+            <div class="tasks-header">
+
+                <h2>My Tasks</h2>
+
+                <span id="taskCount">
+                    0 tasks
+                </span>
+
+            </div>
+
+
+            <!-- Tasks will appear here -->
+            <div id="taskList" class="task-list">
+
+                <!-- JavaScript will add tasks here -->
+
+            </div>
+
+
+            <!-- Empty Message -->
+            <div id="emptyMessage" class="empty-message">
+
+                <i class="fa-solid fa-clipboard-list"></i>
+
+                <h3>No tasks yet</h3>
+
+                <p>Add a task to get started</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <p>
+                Stay organized. Get things done.
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
